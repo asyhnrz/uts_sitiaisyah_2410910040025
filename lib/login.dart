@@ -1,3 +1,4 @@
+import 'registrasi.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -20,7 +21,7 @@ class _LoginState extends State<Login> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("gambar/Logo.png", height: 120),
+              Image.asset("gambar/Logo.png", height: 150),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -66,6 +67,7 @@ class _LoginState extends State<Login> {
               ),
             ),
           ),
+          SizedBox(height: 20),
           Text("Password:"),
           TextField(
             controller: _passwordcontroller,
@@ -87,6 +89,42 @@ class _LoginState extends State<Login> {
               ),
             ),
           ),
+          const SizedBox(height: 40),
+
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Icon(Icons.check_box_outline_blank),
+              Text("Keep me logged in"),
+            ],
+          ),
+
+          const SizedBox(height: 25),
+
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 80, 136, 233),
+              padding: const EdgeInsets.symmetric(vertical: 15),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            child: const Text("Login", style: TextStyle(fontSize: 18, color: Colors.white)),
+          ),
+
+          const SizedBox(height: 30),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Belum punya akun?"),
+              TextButton(onPressed: () {Navigator.pushReplacementNamed(context, "/registrasi");}, child: Text(" Daftar disini", style: TextStyle(color: Colors.blue),),)
+              
+            ],
+          ),
+
+          const SizedBox(height: 600),
         ],
       ),
     );

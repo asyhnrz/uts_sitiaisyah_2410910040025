@@ -13,17 +13,19 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: ListView(
         children: [
-          Image.asset("gambar/Logo.png"),
-          Column(
-            children: [
-              Text("LKS"),
-            ],
-          ),
-          Column(
-            children: [
-              Text("MART")
-            ],
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset("gambar/Logo.png"),
+            Column(
+              children: [
+                Text("LKS"),
+                Text("MART"),
+              ],
+            ),
+          ],
+        ),
+        SizedBox(height: 20,)
         ],
       ),
     );

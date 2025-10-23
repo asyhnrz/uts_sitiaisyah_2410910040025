@@ -1,18 +1,30 @@
 import 'package:flutter/material.dart';
 
-class LoginSatu extends StatefulWidget {
-  const LoginSatu({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<LoginSatu> createState() => _LoginSatuState();
+  State<Login> createState() => _LoginState();
 }
 
-class _LoginSatuState extends State<LoginSatu> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        
+        children: [
+          Image.asset("gambar/Logo.png"),
+          Column(
+            children: [
+              Text("LKS"),
+            ],
+          ),
+          Column(
+            children: [
+              Text("MART")
+            ],
+          ),
+        ],
       ),
     );
   }

@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: const EdgeInsets.only(top: 300)),
+            Padding(padding: const EdgeInsets.only(top: 300, bottom: 10)),
             Image.asset("gambar/Logo.png"),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,16 +28,17 @@ class _LoginState extends State<Login> {
           ],
         ),
         SizedBox(height: 10,),
-
         Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Sign In", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 4, 6, 10))),
+              Text("Enter your ID and password to sign")
             ],
           ),
-        )
+          
+        ),
         ],
       ),
     );
